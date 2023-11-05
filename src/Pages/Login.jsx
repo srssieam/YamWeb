@@ -1,17 +1,64 @@
 import { MdEmail } from 'react-icons/md';
 import { FaLock } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import loginbg from '../assets/food img/loginimg.jpg'
+import { useContext, useState } from 'react';
+import { AuthContext } from '../Providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Login = () => {
+    const { signInUser, googleSignIn } = useContext(AuthContext) 
+    const [loginError, setLoginError] =  useState(null);
+    const location= useLocation();
+    const goTo = useNavigate()
+
     const handleLogin=e=>{
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password)
+
+        signInUser(email, password)
+            .then(res => {
+                const loggedInUser = res.user;
+                console.log(loggedInUser);
+                Swal.fire(
+                    'Good job!',
+                    'Login successful',
+                    'success'
+                )
+                goTo(location?.state ? location.state : '/')
+            })
+            .catch((err) => {
+                console.log(err)
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Login failed',
+                    text: 'Wrong email or password!',
+                })
+                setLoginError('Your password is incorrect')
+            })
     }
+
+    const handleGoogleLogin = ()=>{
+        googleSignIn()
+        .then(res => {
+            const loggedInUser = res.user;
+            console.log(loggedInUser);
+            Swal.fire(
+                'Good job!',
+                'Login successful',
+                'success'
+            )
+            goTo(location?.state ? location.state : '/')
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+    }
+
     return (
         <div className='lg:absolute top-0 -z-10 h-screen w-full'>
             <div className='relative top-0 w-full'>
@@ -34,7 +81,7 @@ const Login = () => {
                             </div>
                         </div>
                         <div>
-                            {/* <p className='text-red-700 text-lg lg:text-2xl font-semibold'>{loginError}</p> */}
+                            <p className='text-red-700 text-lg lg:text-2xl font-semibold'>{loginError}</p>
                         </div>
                         <div>
                             <p className='text-[#ffa600] text-lg'>Do not have any account ? <Link to="/register" className='hover:underline font-semibold text-[#64a13b]'>register</Link> now.</p>
@@ -44,7 +91,7 @@ const Login = () => {
                         </div>
                     </form>
                     <div className='flex justify-center'>
-                        <button className='mt-4 hover:scale-110 transition-transform flex gap-4 items-center px-4 py-2 text-white bg-transparent border border-[#ffa600] rounded-lg'>Login with google <FcGoogle className='text-xl'></FcGoogle></button>
+                        <button onClick={handleGoogleLogin} className='mt-4 hover:scale-110 transition-transform flex gap-4 items-center px-4 py-2 text-white bg-transparent border border-[#ffa600] rounded-lg'>Login with google <FcGoogle className='text-xl'></FcGoogle></button>
                     </div>
                 </div>
             </div>
