@@ -1,0 +1,17 @@
+
+li a{
+    padding: 0;
+    color:white;
+    text-decoration: none;
+}
+li a:hover{
+    color:#ffa600;
+    text-decoration: underline;
+}
+li a.active{
+    color:#ffa600;
+    text-decoration: underline;
+}
+li a.active a{
+    color:#ffa600;
+}
