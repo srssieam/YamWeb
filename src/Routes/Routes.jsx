@@ -3,8 +3,9 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "../Layouts/Root";
 import Home from "../Pages/Home";
 import About from "../Pages/About";
-import Items from "../Pages/Items";
 import Blog from "../Pages/Blog";
+import Items from "../Pages/FoodItems/Items";
+import AddFoodItem from "../Pages/AddFoodItem";
 
 
 const Routes = createBrowserRouter([
@@ -28,6 +29,10 @@ const Routes = createBrowserRouter([
                 path:'blog',
                 element:<Blog></Blog>
             },
+            {
+                path:'addfooditem',
+                element:<AddFoodItem></AddFoodItem>
+            }
         ]
     }
 ])
