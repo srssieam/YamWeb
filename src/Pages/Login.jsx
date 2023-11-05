@@ -60,7 +60,7 @@ const Login = () => {
     }
 
     return (
-        <div className='lg:absolute top-0 -z-10 h-screen w-full'>
+        <div className='lg:absolute top-0 h-screen w-full'>
             <div className='relative top-0 w-full'>
                 <img src={loginbg} alt="" className='w-full h-[100vh] object-cover' />
                 <div className='absolute top-[50%] md:left-[50%] md:translate-x-[-50%] mx-6 md:mx-0 p-8 translate-y-[-50%] md:w-3/5 lg:w-2/5 font-playpen bg-[#0000008c] backdrop-blur-xl md:p-10 rounded-3xl'>
