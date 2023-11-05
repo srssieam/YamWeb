@@ -19,13 +19,13 @@ const Banner = () => {
                 <SwiperSlide>
                     <div className='relative w-full h-[100vh]'>
                         <img src={banner2} className='h-full w-full' alt="" />
-                        <div className='absolute top-0 h-full w-full md:px-10 lg:px-36 flex flex-col md:flex-row items-center bg-[#0000003f]'>
+                        <div className='absolute top-0 h-full max-w-[1250px] inset-0 mx-auto md:px-10 lg:px-0 flex flex-col md:flex-row items-center'>
                             <div className='flex-1 px-6 lg:px-0'>
                                 <div className='text-[#ffa600]  rounded-2xl space-y-5 text-center md:text-left'>
                                     <h1 className='text-3xl mt-8 md:mt-0 lg:text-5xl font-playpen font-extrabold'>Elevate Your Dining Experience</h1>
                                     <p className='text-lg md:text-2xl'>A Culinary Wonderland Awaits - Discover Our Exquisite Menu.</p>
                                     <p className='text-lg md:text-2xl'>20% discount for take away.</p>
-                                    <Link to='/items'><button className='mt-4 px-5 py-3 bg-[#0000006c] text-[#64a13b] text-2xl font-bold font-playpen transition rounded-md hover:scale-125 bg-blend-luminosity'>Order Now</button></Link>
+                                    <Link to='/items'><button className='mt-4 px-5 py-3 bg-[#0000008c] text-[#64a13b] text-2xl font-bold font-playpen transition rounded-md hover:scale-125 bg-blend-luminosity'>Order Now</button></Link>
                                 </div>
 
                             </div>
@@ -38,13 +38,13 @@ const Banner = () => {
                 <SwiperSlide>
                     <div className='relative w-full h-[100vh]'>
                         <img src={banner1} className='h-full w-full' alt="" />
-                        <div className='absolute top-0 h-full w-full md:px-10 lg:px-36 flex flex-col md:flex-row items-center bg-[#0000003f]'>
+                        <div className='absolute top-0 h-full w-full md:px-10 max-w-[1250px] inset-0 mx-auto lg:px-0 flex flex-col md:flex-row items-center'>
                             <div className='flex-1 px-6 lg:px-0'>
                                 <div className='text-[#ffa600]  rounded-2xl space-y-5 text-center md:text-left'>
                                     <h1 className='text-4xl mt-8 md:mt-0 lg:text-5xl font-playpen font-extrabold'>Discover the Art of Flavor.</h1>
                                     <p className='text-lg md:text-2xl'>Experience Unforgettable Tastes and Memorable Moments.</p>
                                     <p className='text-lg md:text-2xl'>20% discount for take away.</p>
-                                    <Link to='/items'><button className='mt-4 px-5 py-3 bg-[#0000006c] text-[#64a13b] text-2xl font-bold font-playpen transition rounded-md hover:scale-125 bg-blend-luminosity'>Order Now</button></Link>
+                                    <Link to='/items'><button className='mt-4 px-5 py-3 bg-[#0000008c] text-[#64a13b] text-2xl font-bold font-playpen transition rounded-md hover:scale-125 bg-blend-luminosity'>Order Now</button></Link>
                                 </div>
 
                             </div>
@@ -57,13 +57,13 @@ const Banner = () => {
                 <SwiperSlide>
                     <div className='relative w-full h-[100vh]'>
                         <img src={banner3} className='h-full w-full' alt="" />
-                        <div className='absolute top-0 h-full w-full md:px-10 lg:px-36 flex flex-col md:flex-row items-center bg-[#0000003f]'>
+                        <div className='absolute top-0 h-full w-full md:px-10 max-w-[1250px] inset-0 mx-auto lg:px-0 flex flex-col md:flex-row items-center'>
                             <div className='flex-1 px-6 lg:px-0'>
                                 <div className='text-[#ffa600]  rounded-2xl space-y-5 text-center md:text-left'>
                                     <h1 className='text-4xl mt-8 md:mt-0 lg:text-5xl font-playpen font-extrabold'>Satisfy Your Cravings with Us</h1>
                                     <p className='text-lg md:text-2xl'>Savor the Flavors of the World in Every Bite.</p>
                                     <p className='text-lg md:text-2xl'>20% discount for take away.</p>
-                                    <Link to='/items'><button className='mt-4 px-5 py-3 bg-[#0000006c] text-[#64a13b] text-2xl font-bold font-playpen transition rounded-md hover:scale-125 bg-blend-luminosity'>Order Now</button></Link>
+                                    <Link to='/items'><button className='mt-4 px-5 py-3 bg-[#0000008c] text-[#64a13b] text-2xl font-bold font-playpen transition rounded-md hover:scale-125 bg-blend-luminosity'>Order Now</button></Link>
                                 </div>
 
                             </div>
