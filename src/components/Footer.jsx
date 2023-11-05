@@ -34,9 +34,9 @@ const Footer = () => {
                     <Link to='/blog'><a className="link link-hover">Blog</a></Link>
                 </nav>
                 <nav className='lg:text-lg'>
-                    <header className="footer-title text-[#ffa600]">Company</header>
-                    <Link to='/coreFeature'><a className="link link-hover"></a></Link>
+                    <header className="footer-title text-[#ffa600]">Restaurant</header>
                     <Link to='/about'><a className="link link-hover">About</a></Link>
+                    <Link to='/services'><a className="link link-hover">Services</a></Link>
                 </nav>
                 <form>
                     <header className="footer-title text-[#ffa600]">Newsletter</header>

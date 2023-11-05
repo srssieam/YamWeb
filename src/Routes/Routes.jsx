@@ -8,6 +8,7 @@ import Items from "../Pages/FoodItems/Items";
 import AddFoodItem from "../Pages/AddFoodItem";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import Services from "../Pages/Services";
 
 
 const Routes = createBrowserRouter([
@@ -30,6 +31,10 @@ const Routes = createBrowserRouter([
             {
                 path:'blog',
                 element:<Blog></Blog>
+            },
+            {
+                path:'services',
+                element:<Services></Services>
             },
             {
                 path:'addfooditem',

@@ -14,7 +14,8 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 const Banner = () => {
     return (
-        <div className='lg:absolute top-0 w-full'>
+        <div className='relative h-[100vh]'>
+            <div className='lg:absolute top-[-150px] w-full'>
             <Swiper autoplay={{delay: 4000}} pagination={true} navigation={true} modules={[Pagination, Navigation, Autoplay]} className="mySwiper">
                 <SwiperSlide>
                     <div className='relative w-full h-[100vh]'>
@@ -74,6 +75,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
             </Swiper>
+        </div>
         </div>
     );
 };
