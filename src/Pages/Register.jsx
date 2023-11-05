@@ -1,24 +1,31 @@
 import { MdEmail } from 'react-icons/md';
-import { FaLock } from 'react-icons/fa';
-import { FcGoogle } from 'react-icons/fc';
+import { FaLock, FaUserAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import loginbg from '../assets/food img/loginimg.jpg'
 
-const Login = () => {
-    const handleLogin=e=>{
+const Register = () => {
+    const handleRegister=e=>{
         e.preventDefault();
         const form = e.target;
+        const name = form.name.value
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password)
+        console.log(name, email, password)
     }
     return (
         <div className='lg:absolute top-0 -z-10 h-screen w-full'>
             <div className='relative top-0 w-full'>
                 <img src={loginbg} alt="" className='w-full h-[100vh] object-cover' />
-                <div className='absolute top-[50%] md:left-[50%] md:translate-x-[-50%] mx-6 md:mx-0 p-8 translate-y-[-50%] md:w-3/5 lg:w-2/5 font-playpen bg-[#0000008c] backdrop-blur-xl md:p-10 rounded-3xl'>
-                    <h1 className='text-xl text-center md:text-2xl lg:text-4xl font-semibold py-2 md:py-3 lg:py-7 text-[#64a13b]'>Login now!</h1>
-                    <form onSubmit={handleLogin} className='space-y-3 lg:space-y-8'>
+                <div className='absolute md:mt-7 top-[50%] md:left-[50%] md:translate-x-[-50%] mx-6 md:mx-0 p-8 translate-y-[-50%] md:w-3/5 lg:w-2/5 font-playpen bg-[#0000008c] backdrop-blur-xl md:p-10 rounded-3xl'>
+                    <h1 className='text-xl text-center md:text-2xl lg:text-4xl font-semibold py-2 md:py-3 lg:py-7 text-[#64a13b]'>Create Account</h1>
+                    <form onSubmit={handleRegister} className='space-y-3 lg:space-y-8'>
+                    <div>
+                            <label htmlFor="name" className=' text-[#ffa600] font-semibold text-lg lg:text-2xl'>Your Name : </label><br />
+                            <div className='flex items-center border-b-2 border-[#ffa600]'>
+                                <input type="text" name="name" id="name" className='outline-none bg-transparent w-full px-2 py-1' required />
+                                <FaUserAlt className='text-2xl text-[#ffa600]'></FaUserAlt>
+                            </div>
+                        </div>
                         <div>
                             <label htmlFor="email" className=' text-[#64a13b] font-semibold text-lg lg:text-2xl'>Your Email : </label><br />
                             <div className='flex items-center border-b-2 border-[#ffa600]'>
@@ -37,19 +44,16 @@ const Login = () => {
                             {/* <p className='text-red-700 text-lg lg:text-2xl font-semibold'>{loginError}</p> */}
                         </div>
                         <div>
-                            <p className='text-[#ffa600] text-lg'>Do not have any account ? <Link to="/register" className='hover:underline font-semibold text-[#64a13b]'>register</Link> now.</p>
+                            <p className='text-[#ffa600] text-lg'>Already have account ? <Link to="/login" className='hover:underline font-semibold text-[#64a13b]'>Login</Link> now.</p>
                         </div>
                         <div>
-                            <input type="submit" value="Login" className='btn w-full text-xl bg-[#061606] hover:border-[#64a13b]  text-[#ffa600] font-playpen normal-case font-semibold' />
+                            <input type="submit" value="Submit" className='btn w-full text-xl bg-[#061606] hover:border-[#64a13b]  text-[#ffa600] font-playpen normal-case font-semibold' />
                         </div>
                     </form>
-                    <div className='flex justify-center'>
-                        <button className='mt-4 hover:scale-110 transition-transform flex gap-4 items-center px-4 py-2 text-white bg-transparent border border-[#ffa600] rounded-lg'>Login with google <FcGoogle className='text-xl'></FcGoogle></button>
-                    </div>
                 </div>
             </div>
         </div>
     );
 };
 
-export default Login;
+export default Register;
