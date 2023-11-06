@@ -15,6 +15,7 @@ import UseAxios from "../hooks/UseAxios";
 import PurchasFood from "../Pages/PurchasFood";
 import MyOrderedFood from "../Pages/myOrderedFood";
 import PrivateRoute from "./PrivateRoute";
+import MyAddedItems from "../Pages/MyAddedItems";
 const axios = UseAxios();
 
 const Routes = createBrowserRouter([
@@ -71,6 +72,10 @@ const Routes = createBrowserRouter([
             {
                 path:'myOrderedFood',
                 element:<PrivateRoute><MyOrderedFood></MyOrderedFood></PrivateRoute>
+            },
+            {
+                path:'myAddedItems',
+                element:<PrivateRoute><MyAddedItems></MyAddedItems></PrivateRoute>
             }
         ]
     }

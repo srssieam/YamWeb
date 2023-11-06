@@ -27,10 +27,8 @@ const AddFoodItem = () => {
             foodCategory,
             quantity,
             price,
-            addBy:{
-                name,
-                email
-            },
+            name,
+            email,
             foodOrigin,
             description
         }
@@ -45,7 +43,7 @@ const AddFoodItem = () => {
                     'success'
                 )
                 form.reset();
-                window.location.pathname='myAddedFood'
+                window.location.pathname='myAddedItems'
             }
         })
         .catch(err => console.log(err));

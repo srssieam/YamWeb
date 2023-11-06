@@ -12,17 +12,18 @@ import UseAxios from "../../hooks/UseAxios";
 
 const Items = () => {
     const [items, setItems] = useState([]);
-    const [category, setCategory] = useState('')
+    const [categoryItem, setCategoryItem] = useState(null)
     const axios = UseAxios();
 
     useEffect(() => {
-        axios.get(`/foodItems?foodCategory=${category}`)
+        axios.get(`/foodItems`)
             .then(res => setItems(res.data))
-    }, [category, axios])
+    }, [axios])
     console.log(items)
 
     const handleCategory = (categoryName) =>{
-        setCategory(categoryName)
+        const findItems = items.filter(item => item.foodCategory === categoryName);
+        setCategoryItem(findItems)
     }
 
     return (
@@ -30,7 +31,7 @@ const Items = () => {
             <h1 className="text-xl font-playpen font-semibold text-center text-[#64a13b]">Food Items</h1>
             <h1 className="text-5xl text-center font-playpen">Our Special Menus</h1>
             <div className="flex justify-center">
-                <div onClick={()=>handleCategory('')} className="hover:text-[#ffa600] p-5 flex flex-col items-center justify-center cursor-pointer">
+                <div onClick={()=>setCategoryItem(items)} className="hover:text-[#ffa600] p-5 flex flex-col items-center justify-center cursor-pointer">
                     <img src={allfood} className="h-10 w-10" alt="" />
                     <p>All</p>
                 </div>
@@ -61,7 +62,9 @@ const Items = () => {
             </div>
             <div className="my-9 grid md:grid-cols-2 lg:grid-cols-3 gap-7">
                 {
-                    items?.map((item)=><ItemCard key={item._id} item={item}></ItemCard>)
+                   categoryItem ? categoryItem.map((item)=><ItemCard key={item._id} item={item}></ItemCard>)
+                   :
+                   items?.map((item)=><ItemCard key={item._id} item={item}></ItemCard>)
                 }
             </div>
         </div>

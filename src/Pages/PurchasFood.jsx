@@ -12,7 +12,7 @@ const PurchasFood = () => {
     const axios = UseAxios()
     const loadedFoodItem = useLoaderData();
     console.log(loadedFoodItem)
-    const { _id, foodName, quantity, price, foodImage } = loadedFoodItem.data;
+    const { foodName, quantity, price, foodImage } = loadedFoodItem.data;
 
 
     const handlePurchase = (e) => {
@@ -55,7 +55,7 @@ const PurchasFood = () => {
                         'success'
                     )
                     form.reset();
-                    window.location.pathname='myOrderedFood'
+                    window.location.pathname='myOrderedItems'
                 }
             })
             .catch(err => console.log(err));
