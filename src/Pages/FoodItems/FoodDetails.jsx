@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 const FoodDetails = () => {
@@ -6,10 +6,6 @@ const FoodDetails = () => {
     console.log(loadedFoodItem)
     const {_id, foodName, foodImage, foodCategory, quantity, price, addBy, foodOrigin, description}= loadedFoodItem.data;
    
-
-    const handleOrder = ()=>{
-
-    }
 
     return (
         <div className="max-w-[1250px] mx-auto p-4 lg:p-0">
@@ -22,7 +18,7 @@ const FoodDetails = () => {
                 <p><strong className="text-[#64a13b]"> Price:</strong> ${price}</p>
                 <p>{description}</p>
                 <div className="card-actions justify-end">
-                    <button onClick={handleOrder} className="btn w-full bg-[#061606] hover:bg-[#28685d] text-white normal-case">Order Now</button>
+                    <Link to={`/purchase/${_id}`} className="w-full"><button className="btn w-full bg-[#061606] hover:bg-[#28685d] text-white normal-case">Order Now</button></Link>
                 </div>
             </div>
         </div>

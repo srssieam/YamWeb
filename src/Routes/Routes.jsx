@@ -12,6 +12,7 @@ import Services from "../Pages/Services";
 import Team from "../Pages/Team";
 import FoodDetails from "../Pages/FoodItems/FoodDetails";
 import UseAxios from "../hooks/UseAxios";
+import PurchasFood from "../Pages/PurchasFood";
 const axios = UseAxios();
 
 const Routes = createBrowserRouter([
@@ -59,7 +60,12 @@ const Routes = createBrowserRouter([
                 path:'foodDetails/:id',
                 element:<FoodDetails></FoodDetails>,
                 loader:({params})=>axios.get(`/foodItems/${params.id}`)
-            }
+            },
+            {
+                path:'purchase/:id',
+                element:<PurchasFood></PurchasFood>,
+                loader:({params})=>axios.get(`/foodItems/${params.id}`)
+            },
         ]
     }
 ])
