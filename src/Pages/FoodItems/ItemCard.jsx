@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import halal from '../../assets/halal.png'
 
 const ItemCard = ({ item }) => {
-    const { foodName, foodImage, foodCategory, price } = item;
+    const { _id, foodName, foodImage, foodCategory, price, quantity } = item;
     return (
         <div className="card card-compact bg-base-100 border shadow-[#64a13b] shadow-xl">
             <figure className="h-[250px] relative">
@@ -11,10 +11,11 @@ const ItemCard = ({ item }) => {
             </figure>
             <div className="card-body">
                 <h2 className="card-title font-playpen">{foodName}</h2>
-                <p className="text-lg font-semibold">category: {foodCategory}</p>
+                <p className="text-lg font-semibold">Category: {foodCategory}</p>
+                <p className="text-lg font-semibold">Stock: {quantity}</p>
                 <div className="flex justify-between items-center">
                     <p className="text-lg font-semibold">Price: {price} $</p>
-                    <Link to=''>
+                    <Link to={`/foodDetails/${_id}`}>
                         <button className="btn normal-case bg-[#061606] hover:border-[#64a13b]  text-[#ffa600] font-playpen">Show details</button>
                     </Link>
                 </div>

@@ -10,7 +10,9 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import Services from "../Pages/Services";
 import Team from "../Pages/Team";
-
+import FoodDetails from "../Pages/FoodItems/FoodDetails";
+import UseAxios from "../hooks/UseAxios";
+const axios = UseAxios();
 
 const Routes = createBrowserRouter([
     {
@@ -52,6 +54,11 @@ const Routes = createBrowserRouter([
             {
                 path:'register',
                 element:<Register></Register>
+            },
+            {
+                path:'foodDetails/:id',
+                element:<FoodDetails></FoodDetails>,
+                loader:({params})=>axios.get(`/foodItems/${params.id}`)
             }
         ]
     }
