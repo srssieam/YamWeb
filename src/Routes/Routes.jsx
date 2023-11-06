@@ -9,6 +9,7 @@ import AddFoodItem from "../Pages/AddFoodItem";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import Services from "../Pages/Services";
+import Team from "../Pages/Team";
 
 
 const Routes = createBrowserRouter([
@@ -35,6 +36,10 @@ const Routes = createBrowserRouter([
             {
                 path:'services',
                 element:<Services></Services>
+            },
+            {
+                path:'team',
+                element:<Team></Team>
             },
             {
                 path:'addfooditem',

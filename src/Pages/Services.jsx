@@ -3,7 +3,8 @@ import { IoRestaurantOutline } from 'react-icons/io5';
 const Services = () => {
     return (
         <div className=" md:my-11 px-6 lg:px-0 m-4 max-w-[1250px] mx-auto text-[#4c7c2d]">
-            <h1 className="text-xl font-playpen font-semibold text-center text-[#64a13b]">services we provide</h1>
+            <h1 className="text-xl font-playpen font-semibold text-center text-[#64a13b]">services</h1>
+            <h1 className="text-3xl md:text-5xl font-semibold text-center text-white">services we provide</h1>
             <div className='flex flex-wrap gap-9 my-6'>
                 <div className='flex-1 border border-[#64a13b] p-11 text-center space-y-5 hover:bg-[#ffa600] cursor-pointer'>
                     <GiFruitBowl className='min-w-[170px] text-8xl mx-auto'></GiFruitBowl>

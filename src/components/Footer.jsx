@@ -37,16 +37,17 @@ const Footer = () => {
                     <header className="footer-title text-[#ffa600]">Restaurant</header>
                     <Link to='/about'><a className="link link-hover">About</a></Link>
                     <Link to='/services'><a className="link link-hover">Services</a></Link>
+                    <Link to='/team'><a className="link link-hover">Our team</a></Link>
                 </nav>
                 <form>
-                    <header className="footer-title text-[#ffa600]">Newsletter</header>
+                    <header className="footer-title text-xl text-[#ffa600]">Newsletter</header>
                     <fieldset className="form-control lg:w-80">
                         <label className="label">
-                            <span className="label-text">Enter your email address</span>
+                            <span className="">Enter your email address</span>
                         </label>
-                        <div className="relative ">
+                        <div className="relative">
                             <input type="text" placeholder="username@site.com" className="input border border-[#0b270b] w-full" />
-                            <button className="btn bg-[#0b270b] border-none absolute top-0 right-0 rounded-l-none">Subscribe</button>
+                            <button className="btn bg-[#0b270b] text-[#ffa600] border-none absolute top-0 right-0 rounded-l-none">Subscribe</button>
                         </div>
                     </fieldset>
                 </form>
