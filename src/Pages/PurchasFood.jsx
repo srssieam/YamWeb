@@ -12,7 +12,7 @@ const PurchasFood = () => {
     const axios = UseAxios()
     const loadedFoodItem = useLoaderData();
     console.log(loadedFoodItem)
-    const { _id, foodName, quantity, price } = loadedFoodItem.data;
+    const { _id, foodName, quantity, price, foodImage } = loadedFoodItem.data;
 
 
     const handlePurchase = (e) => {
@@ -24,7 +24,7 @@ const PurchasFood = () => {
         const date = form.date.value;
         const buyerName = form.name.value;
         const buyerEmail = form.email.value;
-        console.log(foodName, typeof price, purchaseQuantity, date, buyerName, buyerEmail)
+        console.log(foodName, price, purchaseQuantity, date, buyerName, buyerEmail)
 
         const purchaseInfo = {
             buyerName,
@@ -32,7 +32,8 @@ const PurchasFood = () => {
             foodName,
             price,
             date,
-            purchaseQuantity
+            purchaseQuantity,
+            foodImage
         }
 
         if (purchaseQuantity > quantity) {

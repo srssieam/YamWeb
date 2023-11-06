@@ -1,7 +1,8 @@
 import { Puff } from 'react-loader-spinner'
 import { useContext } from 'react';
-import { AuthContext } from '../provider/AuthProvider';
+
 import { Navigate, useLocation } from 'react-router-dom';
+import { AuthContext } from '../Providers/AuthProvider';
 
 const PrivateRoute = ({ children }) => {
     const { user, loading } = useContext(AuthContext);
@@ -21,8 +22,8 @@ const PrivateRoute = ({ children }) => {
             />
         </div>
     }
-    if (user) {
-        return (children)
+    if (user.email) {
+        return children
     }
     return <Navigate state={location.pathname} to="/signIn"></Navigate>
 };
