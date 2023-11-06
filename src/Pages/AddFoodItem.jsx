@@ -1,21 +1,55 @@
+import Swal from "sweetalert2";
+import UseAxios from "../hooks/UseAxios";
+import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
 
 
 const AddFoodItem = () => {
+    const { user } = useContext(AuthContext)
+    const axios = UseAxios();
 
-    const handleAddFood= e=>{
+    const handleAddFood = e => {
         e.preventDefault();
         const form = e.target;
-        const name = form.foodName.value;
-        const category = form.category.value;
-        const image = form.Img.value;
-        const userName = form.userName.value;
-        const email = form.email.value;
-        const country = form.country.value;
-        const price = form.price.value;
+        const foodName = form.foodName.value;
+        const foodImage = form.Img.value;
+        const foodCategory = form.category.value;
         const quantity = form.quantity.value;
+        const price = form.price.value;
+        const name = form.userName.value;
+        const email = form.email.value;
+        const foodOrigin = form.country.value;
         const description = form.description.value;
-        
-        console.log(name, category, image, userName, email, country, price, quantity, description)
+
+        const newFoodItem = {
+            foodName,
+            foodImage,
+            foodCategory,
+            quantity,
+            price,
+            addBy:{
+                name,
+                email
+            },
+            foodOrigin,
+            description
+        }
+
+        axios.post('/foodItems', newFoodItem)
+        .then(res => {
+            console.log(res.data)
+            if (res.data.insertedId) {
+                Swal.fire(
+                    'Added new item',
+                    'Your food is added successfullY',
+                    'success'
+                )
+                form.reset();
+                window.location.pathname='myAddedFood'
+            }
+        })
+        .catch(err => console.log(err));
+
     }
 
     return (
@@ -56,13 +90,13 @@ const AddFoodItem = () => {
                         <label className="label">
                             <span className="label-text text-2xl font-semibold font-playpen text-[#64a13b]">Added by :</span>
                         </label>
-                        <input type="text" name="userName" value={'name'} className="input border border-[#ffa600]" readOnly />
+                        <input type="text" name="userName" value={user?.displayName} className="input border border-[#ffa600]" readOnly />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text text-2xl font-semibold font-playpen text-[#64a13b]">Your Email :</span>
                         </label>
-                        <input type="text" name="email" placeholder="Enter your email" value={'user email'} className="input border border-[#ffa600]" required />
+                        <input type="text" name="email" placeholder="Enter your email" value={user?.email} className="input border border-[#ffa600]" readOnly />
                     </div>
                     <div className="form-control">
                         <label className="label">

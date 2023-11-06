@@ -60,7 +60,7 @@ const Routes = createBrowserRouter([
             },
             {
                 path:'foodDetails/:id',
-                element:<FoodDetails></FoodDetails>,
+                element:<PrivateRoute><FoodDetails></FoodDetails></PrivateRoute>,
                 loader:({params})=>axios.get(`/foodItems/${params.id}`)
             },
             {

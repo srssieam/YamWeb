@@ -55,6 +55,7 @@ const PurchasFood = () => {
                         'success'
                     )
                     form.reset();
+                    window.location.pathname='myOrderedFood'
                 }
             })
             .catch(err => console.log(err));
