@@ -30,14 +30,14 @@ const Footer = () => {
                 <nav className='lg:text-lg'>
                     <header className="footer-title text-[#ffa600]">About</header>
                     <a className="link link-hover" href='/'>Home</a>
-                    <Link to='/items'><a className="link link-hover">Items</a></Link>
-                    <Link to='/blog'><a className="link link-hover">Blog</a></Link>
+                    <Link to='/items' className="link link-hover">Items</Link>
+                    <Link to='/blog' className="link link-hover">Blog</Link>
                 </nav>
                 <nav className='lg:text-lg'>
                     <header className="footer-title text-[#ffa600]">Restaurant</header>
-                    <Link to='/about'><a className="link link-hover">About</a></Link>
-                    <Link to='/services'><a className="link link-hover">Services</a></Link>
-                    <Link to='/team'><a className="link link-hover">Our team</a></Link>
+                    <Link to='/about' className="link link-hover">About</Link>
+                    <Link to='/services' className="link link-hover">Services</Link>
+                    <Link to='/team'className="link link-hover">Our team</Link>
                 </nav>
                 <form>
                     <header className="footer-title text-xl text-[#ffa600]">Newsletter</header>
