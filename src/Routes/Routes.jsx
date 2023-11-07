@@ -17,12 +17,14 @@ import MyOrderedFood from "../Pages/myOrderedFood";
 import PrivateRoute from "./PrivateRoute";
 import MyAddedItems from "../Pages/MyAddedItems";
 import UpdatePage from "../components/UpdatePage";
+// import ErrorPage from "../Pages/ErrorPage";
 const axios = UseAxios();
 
 const Routes = createBrowserRouter([
     {
         path:'/',
         element:<Root></Root>,
+        // errorElement:<ErrorPage></ErrorPage>,
         children:[
             {
                 path:'/',
@@ -68,7 +70,7 @@ const Routes = createBrowserRouter([
             },
             {
                 path:'purchase/:id',
-                element:<PurchasFood></PurchasFood>,
+                element:<PrivateRoute><PurchasFood></PurchasFood></PrivateRoute>,
                 loader:({params})=>axios.get(`/foodItems/${params.id}`)
             },
             {

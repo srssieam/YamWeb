@@ -82,7 +82,7 @@ const Items = () => {
         <div className="max-w-[1250px] mx-auto px-6 lg:px-0 my-8 md:my-16">
             <h1 className="text-xl font-playpen font-semibold text-center text-[#64a13b]">Food Items</h1>
             <h1 className="text-5xl text-center font-playpen">Our Special Menus</h1>
-            <div className="flex justify-center">
+            <div className="flex justify-center flex-wrap">
                 <div onClick={() => window.location.pathname = 'items'} className="hover:text-[#ffa600] p-5 flex flex-col items-center justify-center cursor-pointer">
                     <img src={allfood} className="h-10 w-10" alt="" />
                     <p>All</p>

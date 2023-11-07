@@ -3,198 +3,216 @@
     "foodName": "Classic Cheeseburger",
     "foodImage": "https://i.ibb.co/zGvkcm8/Classic-Cheeseburger.jpg",
     "foodCategory": "Burger",
-    "quantity": 1,
+    "quantity": 20,
     "price": 8.99,
     "name": "John Doe",
     "email": "johndoe@example.com",
     "foodOrigin": "USA",
-    "description": "Our Classic Cheeseburger is a mouthwatering delight, featuring a juicy beef patty, cheddar cheese, fresh lettuce, tomato, and special sauce, all nestled in a soft bun."
+    "description": "Our Classic Cheeseburger is a mouthwatering delight, featuring a juicy beef patty, cheddar cheese, fresh lettuce, tomato, and special sauce, all nestled in a soft bun.",
+    "OrderedCount": 0
   },
   {
     "foodName": "Margherita Pizza",
     "foodImage": "https://i.ibb.co/qr20K89/Margherita-Pizza.jpg",
     "foodCategory": "Pizza",
-    "quantity": 1,
+    "quantity": 18,
     "price": 12.99,
     "name": "Jane Smith",
     "email": "janesmith@example.com",
     "foodOrigin": "Italy",
-    "description": "Our Margherita Pizza is a classic Italian favorite. It features a thin, crispy crust topped with fresh tomato sauce, mozzarella cheese, basil leaves, and a drizzle of olive oil. It's a simple yet delicious choice for pizza enthusiasts."
+    "description": "Our Margherita Pizza is a classic Italian favorite. It features a thin, crispy crust topped with fresh tomato sauce, mozzarella cheese, basil leaves, and a drizzle of olive oil. It's a simple yet delicious choice for pizza enthusiasts.",
+    "OrderedCount": 0
   },
   {
     "foodName": "Blueberry Muffin",
     "foodImage": "https://i.ibb.co/xH02DHy/Blueberry-Muffin.jpg",
     "foodCategory": "Bakery",
-    "quantity": 2,
+    "quantity": 23,
     "price": 3.99,
     "name": "Michael Brown",
     "email": "michaelbrown@example.com",
     "foodOrigin": "USA",
-    "description": "Our Blueberry Muffin is a delightful bakery treat. It's bursting with plump blueberries and has a tender, moist crumb. Perfect with a cup of coffee."
+    "description": "Our Blueberry Muffin is a delightful bakery treat. It's bursting with plump blueberries and has a tender, moist crumb. Perfect with a cup of coffee.",
+    "OrderedCount": 0
   },
   {
     "foodName": "Caesar Salad",
     "foodImage": "https://i.ibb.co/vdSjpgL/Caesar-Salad.jpg",
     "foodCategory": "Salad",
-    "quantity": 1,
+    "quantity": 12,
     "price": 9.99,
     "name": "Maria Gonzalez",
     "email": "mariagonzalez@example.com",
     "foodOrigin": "USA",
-    "description": "Our Caesar Salad is a classic choice, featuring crisp romaine lettuce, croutons, Parmesan cheese, and our signature Caesar dressing. It's a refreshing and savory salad option."
+    "description": "Our Caesar Salad is a classic choice, featuring crisp romaine lettuce, croutons, Parmesan cheese, and our signature Caesar dressing. It's a refreshing and savory salad option.",
+    "OrderedCount": 0
   },
   {
     "foodName": "Iced Coffee",
     "foodImage": "https://i.ibb.co/M2ysTc7/Iced-Coffee.jpg",
     "foodCategory": "Drink",
-    "quantity": 1,
+    "quantity": 15,
     "price": 3.99,
     "name": "David Wilson",
     "email": "davidwilson@example.com",
     "foodOrigin": "Various",
-    "description": "Our Iced Coffee is a perfect way to cool off. Made from freshly brewed coffee, it's chilled and served over ice with your choice of cream and sweeteners."
+    "description": "Our Iced Coffee is a perfect way to cool off. Made from freshly brewed coffee, it's chilled and served over ice with your choice of cream and sweeteners.",
+    "OrderedCount": 0
   },
   {
     "foodName": "Sushi Platter",
     "foodImage": "https://i.ibb.co/18XLHy3/Sushi-Platter.jpg",
     "foodCategory": "Asian",
-    "quantity": 1,
+    "quantity": 14,
     "price": 24.99,
     "name": "Sophia Lee",
     "email": "sophialee@example.com",
     "foodOrigin": "Japan",
-    "description": "Our Sushi Platter offers a delightful assortment of fresh, handcrafted sushi. It includes a variety of sushi rolls and sashimi, made with the finest quality fish, rice, and seaweed. Each piece is carefully prepared by our skilled sushi chefs, ensuring a taste of Japan right at your table."
+    "description": "Our Sushi Platter offers a delightful assortment of fresh, handcrafted sushi. It includes a variety of sushi rolls and sashimi, made with the finest quality fish, rice, and seaweed. Each piece is carefully prepared by our skilled sushi chefs, ensuring a taste of Japan right at your table.",
+    "OrderedCount": 0
   },
   {
     "foodName": "Chocolate Brownie",
     "foodImage": "https://i.ibb.co/Ms74xND/Chocolate-Brownie.jpg",
     "foodCategory": "Dessert",
-    "quantity": 1,
+    "quantity": 20,
     "price": 4.99,
     "name": "Laura Johnson",
     "email": "laurajohnson@example.com",
     "foodOrigin": "USA",
-    "description": "Indulge in our Chocolate Brownie, a decadent dessert featuring a rich, fudgy brownie topped with a drizzle of chocolate sauce and a scoop of vanilla ice cream. It's a sweet and satisfying treat."
+    "description": "Indulge in our Chocolate Brownie, a decadent dessert featuring a rich, fudgy brownie topped with a drizzle of chocolate sauce and a scoop of vanilla ice cream. It's a sweet and satisfying treat.",
+    "OrderedCount": 0
   },
   {
     "foodName": "Spaghetti Carbonara",
     "foodImage": "https://i.ibb.co/YPgg96L/Spaghetti-Carbonara.jpg",
     "foodCategory": "Pasta",
-    "quantity": 1,
+    "quantity": 25,
     "price": 14.99,
     "name": "Alex Davis",
     "email": "alexdavis@example.com",
     "foodOrigin": "Italy",
-    "description": "Spaghetti Carbonara is a classic Roman pasta dish known for its rich and creamy sauce. It's made with simple ingredients, including spaghetti, pancetta or guanciale (cured pork), eggs, Pecorino Romano cheese, black pepper, and a touch of olive oil. The pasta is cooked to al dente, and then it's tossed with a sauce made from eggs, cheese, and crispy pancetta. The result is a luscious, creamy pasta with a perfect balance of flavors. To make this dish, sauté the pancetta until crispy, mix the eggs and cheese, combine with cooked pasta, and toss to coat. Add a generous amount of black pepper for that distinctive flavor. Garnish with extra cheese and serve hot. Spaghetti Carbonara is a true Italian comfort food that's simple yet incredibly satisfying."
+    "description": "Spaghetti Carbonara is a classic Roman pasta dish known for its rich and creamy sauce. It's made with simple ingredients, including spaghetti, pancetta or guanciale (cured pork), eggs, Pecorino Romano cheese, black pepper, and a touch of olive oil. The pasta is cooked to al dente, and then it's tossed with a sauce made from eggs, cheese, and crispy pancetta. The result is a luscious, creamy pasta with a perfect balance of flavors. To make this dish, sauté the pancetta until crispy, mix the eggs and cheese, combine with cooked pasta, and toss to coat. Add a generous amount of black pepper for that distinctive flavor. Garnish with extra cheese and serve hot. Spaghetti Carbonara is a true Italian comfort food that's simple yet incredibly satisfying.",
+    "OrderedCount": 0
   },
   {
     "foodName": "Chicken Tikka Masala",
     "foodImage": "https://i.ibb.co/2dPX5n8/Chicken-Tikka-Masala.jpg",
     "foodCategory": "Asian",
-    "quantity": 1,
+    "quantity": 17,
     "price": 15.99,
     "name": "Emily White",
     "email": "emilywhite@example.com",
     "foodOrigin": "India",
-    "description": "Indulge in the rich flavors of Chicken Tikka Masala, an Indian favorite. Tender pieces of chicken are marinated in yogurt and spices, then cooked in a creamy tomato-based sauce. It's served with fragrant basmati rice for a complete meal."
+    "description": "Indulge in the rich flavors of Chicken Tikka Masala, an Indian favorite. Tender pieces of chicken are marinated in yogurt and spices, then cooked in a creamy tomato-based sauce. It's served with fragrant basmati rice for a complete meal.",
+    "OrderedCount": 0
   },
   {
     "foodName": "New York Cheesecake",
     "foodImage": "https://i.ibb.co/VTfmRj8/New-York-Cheesecake.jpg",
     "foodCategory": "Dessert",
-    "quantity": 1,
+    "quantity": 20,
     "price": 7.99,
     "name": "Daniel Harris",
     "email": "danielharris@example.com",
     "foodOrigin": "USA",
-    "description": "Our New York Cheesecake is a classic dessert, featuring a rich and creamy cheesecake with a graham cracker crust. It's topped with a choice of fruit compote, making it a delightful end to your meal."
+    "description": "Our New York Cheesecake is a classic dessert, featuring a rich and creamy cheesecake with a graham cracker crust. It's topped with a choice of fruit compote, making it a delightful end to your meal.",
+    "OrderedCount": 0
   },
   {
     "foodName": "BBQ Bacon Burger",
     "foodImage": "https://i.ibb.co/0Zc43zB/BBQ-Bacon-Burger.jpg",
     "foodCategory": "Burger",
-    "quantity": 1,
+    "quantity": 23,
     "price": 9.99,
     "name": "Olivia Clark",
     "email": "oliviaclark@example.com",
     "foodOrigin": "USA",
-    "description": "Our BBQ Bacon Burger is a flavor explosion, featuring a juicy beef patty, crispy bacon, cheddar cheese, caramelized onions, and a smoky BBQ sauce, all on a fresh bun. It's a burger with a kick."
+    "description": "Our BBQ Bacon Burger is a flavor explosion, featuring a juicy beef patty, crispy bacon, cheddar cheese, caramelized onions, and a smoky BBQ sauce, all on a fresh bun. It's a burger with a kick.",
+    "OrderedCount": 0
   },
   {
     "foodName": "Pepperoni Pizza",
     "foodImage": "https://i.ibb.co/2qV6zfH/Pepperoni-Pizza.jpg",
     "foodCategory": "Pizza",
-    "quantity": 1,
+    "quantity": 22,
     "price": 13.99,
     "name": "William Turner",
     "email": "williamturner@example.com",
     "foodOrigin": "Italy",
-    "description": "Our Pepperoni Pizza is a favorite for pizza lovers. It's topped with generous slices of pepperoni and melted mozzarella cheese, all on a perfect crust. It's a classic and satisfying choice."
+    "description": "Our Pepperoni Pizza is a favorite for pizza lovers. It's topped with generous slices of pepperoni and melted mozzarella cheese, all on a perfect crust. It's a classic and satisfying choice.",
+    "OrderedCount": 0
   },
   {
     "foodName": "Cinnamon Roll",
     "foodImage": "https://i.ibb.co/Hn2BJ2q/Cinnamon-Roll.jpg",
     "foodCategory": "Bakery",
-    "quantity": 2,
+    "quantity": 24,
     "price": 4.49,
     "name": "Ava Baker",
     "email": "avabaker@example.com",
     "foodOrigin": "USA",
-    "description": "Our Cinnamon Roll is a sweet and gooey delight. It's swirled with cinnamon and sugar, then topped with a rich cream cheese icing. Perfect for breakfast or a sweet treat anytime."
+    "description": "Our Cinnamon Roll is a sweet and gooey delight. It's swirled with cinnamon and sugar, then topped with a rich cream cheese icing. Perfect for breakfast or a sweet treat anytime.",
+    "OrderedCount": 0
   },
   {
     "foodName": "Greek Salad",
     "foodImage": "https://i.ibb.co/Pw9ZMp5/Greek-Salad.jpg",
     "foodCategory": "Salad",
-    "quantity": 1,
+    "quantity": 16,
     "price": 9.49,
     "name": "Ethan Adams",
     "email": "ethanadams@example.com",
     "foodOrigin": "Greece",
-    "description": "Our Greek Salad is a fresh and vibrant mix of tomatoes, cucumbers, Kalamata olives, red onions, feta cheese, and Greek dressing. It's a taste of the Mediterranean on your plate."
+    "description": "Our Greek Salad is a fresh and vibrant mix of tomatoes, cucumbers, Kalamata olives, red onions, feta cheese, and Greek dressing. It's a taste of the Mediterranean on your plate.",
+    "OrderedCount": 0
   },
   {
     "foodName": "Lemonade",
     "foodImage": "https://i.ibb.co/0D7s8sV/Lemonade.jpg",
     "foodCategory": "Drink",
-    "quantity": 1,
+    "quantity": 17,
     "price": 2.99,
     "name": "Chloe King",
     "email": "chloeking@example.com",
     "foodOrigin": "Various",
-    "description": "Our Lemonade is a refreshing and zesty drink made from freshly squeezed lemons, sweetened to perfection. It's the ideal beverage to quench your thirst."
+    "description": "Our Lemonade is a refreshing and zesty drink made from freshly squeezed lemons, sweetened to perfection. It's the ideal beverage to quench your thirst.",
+    "OrderedCount": 0
   },
   {
     "foodName": "Sushi Nigiri",
     "foodImage": "https://i.ibb.co/0ypRqDH/Sushi-Nigiri.jpg",
     "foodCategory": "Asian",
-    "quantity": 1,
+    "quantity": 18,
     "price": 19.99,
     "name": "Liam Wright",
     "email": "liamwright@example.com",
     "foodOrigin": "Japan",
-    "description": "Our Sushi Nigiri features expertly crafted bite-sized sushi with fresh fish and perfectly seasoned rice. Each piece is a delicious and elegant expression of Japanese cuisine."
+    "description": "Our Sushi Nigiri features expertly crafted bite-sized sushi with fresh fish and perfectly seasoned rice. Each piece is a delicious and elegant expression of Japanese cuisine.",
+    "OrderedCount": 0
   },
   {
     "foodName": "Red Velvet Cake",
     "foodImage": "https://i.ibb.co/XL17RXm/Red-Velvet-Cake.jpg",
     "foodCategory": "Dessert",
-    "quantity": 1,
+    "quantity": 19,
     "price": 6.99,
     "name": "Mia Hall",
     "email": "miahall@example.com",
     "foodOrigin": "USA",
-    "description": "Indulge in our Red Velvet Cake, a moist and velvety red cake layered with rich cream cheese frosting. It's a classic dessert with a touch of elegance."
+    "description": "Indulge in our Red Velvet Cake, a moist and velvety red cake layered with rich cream cheese frosting. It's a classic dessert with a touch of elegance.",
+    "OrderedCount": 0
   },
   {
     "foodName": "Lasagna",
     "foodImage": "https://i.ibb.co/xYp3RJH/Lasagna.jpg",
     "foodCategory": "Pasta",
-    "quantity": 1,
+    "quantity": 11,
     "price": 16.99,
     "name": "Liam Wright",
     "email": "liamwright@example.com",
     "foodOrigin": "Italy",
-    "description": "Our Lasagna is a hearty Italian classic. Layers of pasta, savory Bolognese sauce, creamy béchamel, and melted cheese come together for a satisfying and comforting meal."
+    "description": "Our Lasagna is a hearty Italian classic. Layers of pasta, savory Bolognese sauce, creamy béchamel, and melted cheese come together for a satisfying and comforting meal.",
+    "OrderedCount": 0
   }
 ]

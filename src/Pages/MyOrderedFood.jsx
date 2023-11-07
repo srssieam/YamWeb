@@ -2,16 +2,18 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import UseAxios from "../hooks/UseAxios";
+import UseAxiosSecure from "../hooks/UseAxiosSecure";
 
 
 const MyOrderedFood = () => {
     const { user } = useContext(AuthContext);
     const [orderedItem, setOrderedItem] = useState([]);
     const axios = UseAxios();
+    const axiosSecure = UseAxiosSecure();
     console.log(user.email)
 
     useEffect(() => {
-        axios.get(`/purchasedItems?buyerEmail=${user?.email}`)
+        axiosSecure.get(`/purchasedItems?buyerEmail=${user?.email}`)
             .then(res => setOrderedItem(res.data));
     }, [])
 

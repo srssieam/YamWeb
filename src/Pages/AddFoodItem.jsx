@@ -30,7 +30,8 @@ const AddFoodItem = () => {
             name,
             email,
             foodOrigin,
-            description
+            description,
+            OrderedCount: 0
         }
 
         axios.post('/foodItems', newFoodItem)

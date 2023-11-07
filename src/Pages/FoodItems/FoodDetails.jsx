@@ -10,7 +10,7 @@ const FoodDetails = () => {
     return (
         <div className="max-w-[1250px] mx-auto p-4 lg:p-0">
         <div className="card lg:card-side bg-base-100 shadow-2xl my-16">
-            <figure className="flex-1"><img src={foodImage} alt="Album" /></figure>
+            <figure className="flex-1"><img src={foodImage} className=" max-h-[500px]" alt="Album" /></figure>
             <div className="card-body md:text-lg flex-1">
                 <h2 className="card-title md:text-2xl">{foodName}</h2>
                 <p><strong className="text-[#64a13b]">Made by:</strong> {name}</p>

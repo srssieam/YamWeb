@@ -1,11 +1,10 @@
-import { useState } from "react";
+
 import { useLoaderData } from "react-router-dom";
 import UseAxios from "../hooks/UseAxios";
 import Swal from "sweetalert2";
 
 const UpdatePage = () => {
-    const loadedItems = useLoaderData();
-    const [foodItem, setFoodItem] = useState(loadedItems);
+    const foodItem = useLoaderData();
     const { _id, foodName, foodImage, foodCategory, quantity, price, name, email, foodOrigin, description } = foodItem.data
     const axios = UseAxios();
 

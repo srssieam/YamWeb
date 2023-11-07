@@ -12,7 +12,7 @@ const PurchasFood = () => {
     const axios = UseAxios()
     const loadedFoodItem = useLoaderData();
     console.log(loadedFoodItem)
-    const { foodName, quantity, price, foodImage } = loadedFoodItem.data;
+    const { _id, foodName, foodCategory, quantity, price, foodImage, OrderedCount } = loadedFoodItem.data;
 
 
     const handlePurchase = (e) => {
@@ -26,6 +26,11 @@ const PurchasFood = () => {
         const buyerEmail = form.email.value;
         console.log(foodName, price, purchaseQuantity, date, buyerName, buyerEmail)
 
+        const totalOrderedCount = OrderedCount + parseFloat(purchaseQuantity);
+        console.log(OrderedCount, parseFloat(purchaseQuantity))
+        console.log(totalOrderedCount);
+
+
         const purchaseInfo = {
             buyerName,
             buyerEmail,
@@ -33,7 +38,8 @@ const PurchasFood = () => {
             price,
             date,
             purchaseQuantity,
-            foodImage
+            foodCategory,
+            foodImage,
         }
 
         if (purchaseQuantity > quantity) {
@@ -55,10 +61,17 @@ const PurchasFood = () => {
                         'success'
                     )
                     form.reset();
-                    window.location.pathname='myOrderedItems'
+                    // window.location.pathname='myOrderedFood'
                 }
             })
             .catch(err => console.log(err));
+
+        axios.patch(`/foodItems/${_id}`, { totalOrderedCount })
+            .then(res => {
+                console.log(res)
+            })
+
+
     }
     return (
         <div className=" max-w-[1250px] mx-auto my-11">
@@ -76,7 +89,7 @@ const PurchasFood = () => {
                         </div>
                         <div className="space-y-3">
                             <label htmlFor="quantity" className=' text-[#64a13b] font-semibold text-lg lg:text-2xl'>Quantity : </label><br />
-                            <input type="number" name="quantity" id="" placeholder="Due Amount" defaultValue={1} className="p-3 w-full border rounded-lg" required />
+                            <input type="number" name="quantity" id="" placeholder="Quantity" defaultValue={1} className="p-3 w-full border rounded-lg" required />
                         </div>
                         <div className="space-y-3">
                             <label htmlFor="date" className=' text-[#64a13b] font-semibold text-lg lg:text-2xl'>Purchase date : </label><br />

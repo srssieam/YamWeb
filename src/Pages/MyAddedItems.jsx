@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
-import UseAxiosSecure from "../hooks/UseAxiosSecure";
 import UseAxios from "../hooks/UseAxios";
 
 
@@ -10,13 +9,13 @@ const MyAddedItems = () => {
     const { user } = useContext(AuthContext);
     const [addedItem, setAddedItem] = useState([]);
     const axios = UseAxios();
-    const axiosSecure = UseAxiosSecure();
+
     console.log(user.email)
 
 
     useEffect(() => {
         // axios.get(`/foodItems?addBy=${addBy}`)
-        axiosSecure.get(`/foodItems?email=${user?.email}`)
+        axios.get(`/foodItems?email=${user?.email}`)
             .then(res => {
                 console.log(res.data)
                 setAddedItem(res.data)
