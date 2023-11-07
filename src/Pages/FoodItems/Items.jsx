@@ -75,6 +75,7 @@ const Items = () => {
         const searchText = e.target.search.value;
         setSearch(searchText);
         console.log(searchText)
+        searchText.reset()
     }
 
     return (
@@ -133,7 +134,7 @@ const Items = () => {
                     items?.map((item) => <ItemCard key={item._id} item={item}></ItemCard>)
                 }
             </div>
-            <div className='text-[#ffa600] flex justify-center'>
+            <div className={categoryItem.length > 1  ? 'hidden' : 'text-[#ffa600] flex justify-center' }>
                 <button className={currentPage === 0 ? 'hidden' : 'bg-[#023302] hover:bg-[#64a13b]  py-1 px-3 border border-[#ffa600] rounded'} onClick={handlePrevPage}>Prev</button>
                 {
                     pages.map(page => <button onClick={() => setCurrentPage(page)} className={currentPage === page ? 'bg-[#64a13b]  py-1 px-3 border border-[#ffa600] rounded' : 'bg-[#023302] hover:bg-[#64a13b]  py-1 px-3 border border-[#ffa600] rounded'} key={page}>{page}</button>)
