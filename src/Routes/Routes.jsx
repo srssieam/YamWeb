@@ -16,6 +16,7 @@ import PurchasFood from "../Pages/PurchasFood";
 import MyOrderedFood from "../Pages/myOrderedFood";
 import PrivateRoute from "./PrivateRoute";
 import MyAddedItems from "../Pages/MyAddedItems";
+import UpdatePage from "../components/UpdatePage";
 const axios = UseAxios();
 
 const Routes = createBrowserRouter([
@@ -33,7 +34,8 @@ const Routes = createBrowserRouter([
             },
             {
                 path:'items',
-                element:<Items></Items>
+                element:<Items></Items>,
+                loader: () => axios.get('/itemsCount')
             },
             {
                 path:'blog',
@@ -76,6 +78,11 @@ const Routes = createBrowserRouter([
             {
                 path:'myAddedItems',
                 element:<PrivateRoute><MyAddedItems></MyAddedItems></PrivateRoute>
+            },
+            {
+                path:'updateFood/:id',
+                element:<PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>,
+                loader:({params})=>axios.get(`/foodItems/${params.id}`)
             }
         ]
     }

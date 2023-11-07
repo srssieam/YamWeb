@@ -8,12 +8,25 @@ import drinks from "../../assets/category/drinks.png"
 import asian from "../../assets/category/asian.png"
 import bakery from "../../assets/category/bakery.png"
 import UseAxios from "../../hooks/UseAxios";
+import { useLoaderData } from "react-router-dom";
 
 
 const Items = () => {
     const [items, setItems] = useState([]);
     const [categoryItem, setCategoryItem] = useState(null)
     const axios = UseAxios();
+
+    const getCount = useLoaderData();
+    const foodCount = getCount.data.count
+    console.log(foodCount)
+
+    const itemsPerPage = 6;
+            // calculate total number of required page 
+    const numberOfPages = Math.ceil(foodCount / itemsPerPage);
+    console.log(numberOfPages) 
+
+    const pages = [...Array(numberOfPages).keys()]
+    console.log(pages)
 
     useEffect(() => {
         axios.get(`/foodItems`)

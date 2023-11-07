@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import UseAxios from "../hooks/UseAxios";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 
 const MyAddedItems = () => {
@@ -22,20 +23,16 @@ const MyAddedItems = () => {
 
     const handleDelete = (id) => {
         axios.delete(`/foodItems/${id}`)
-        .then(res => {
-            console.log(res)
+            .then(res => {
+                console.log(res)
                 Swal.fire(
                     'Deleted!',
                     'Your order has been deleted.',
                     'success'
                 )
                 const remaining = addedItem.filter(item => item._id !== id);
-                setAddedItem(remaining)        
-        })
-    }
-
-    const handleUpdate = () => {
-
+                setAddedItem(remaining)
+            })
     }
 
 
@@ -53,12 +50,12 @@ const MyAddedItems = () => {
                             </div>
                             <div>
                                 <p><strong>Item:</strong> {item.foodName}</p>
-                                <p><strong>Quantity:</strong> {item.purchaseQuantity}</p>
+                                <p><strong>Quantity:</strong> {item.quantity}</p>
                                 <p><strong>Price:</strong> {item.price}</p>
                                 <p><strong>Origin:</strong> {item.foodOrigin}</p>
                             </div>
                             <div className="flex flex-col gap-6 justify-center md:justify-end">
-                                <button onClick={() => handleUpdate(item._id)} className="py-2 px-4 rounded bg-green-700 md:mx-7 font-playpen text-white font-semibold">Update</button>
+                                <Link to={`/updateFood/${item._id}`} className="py-2 px-4 rounded bg-green-700 md:mx-7 font-playpen text-white font-semibold text-center"><button>Update</button></Link>
                                 <button onClick={() => handleDelete(item._id)} className="py-2 px-4 rounded bg-red-700 md:mx-7 font-playpen text-white font-semibold">Delete</button>
                             </div>
                         </div>
