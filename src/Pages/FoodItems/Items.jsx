@@ -13,7 +13,7 @@ import { useLoaderData } from "react-router-dom";
 
 const Items = () => {
     const [items, setItems] = useState([]);
-    const [categoryItem, setCategoryItem] = useState(null)
+    const [categoryItem, setCategoryItem] = useState('')
     const axios = UseAxios();
 
     // pagination
@@ -47,14 +47,18 @@ const Items = () => {
     }
 
     useEffect(() => {
-        axios.get(`/foodItems`)
+        axios.get(`/foodItems?page=${currentPage}&size=${itemsPerPage}`)
             .then(res => setItems(res.data))
-    }, [axios])
+    }, [axios, currentPage, itemsPerPage])
     console.log(items)
 
+    useEffect(() => {
+        axios.get(`/foodItems?foodCategory=${categoryItem}`)
+            .then(res => setItems(res.data))
+    }, [axios, categoryItem])
+
     const handleCategory = (categoryName) =>{
-        const findItems = items.filter(item => item.foodCategory === categoryName);
-        setCategoryItem(findItems)
+        setCategoryItem(categoryName)
     }
 
     return (
@@ -62,7 +66,7 @@ const Items = () => {
             <h1 className="text-xl font-playpen font-semibold text-center text-[#64a13b]">Food Items</h1>
             <h1 className="text-5xl text-center font-playpen">Our Special Menus</h1>
             <div className="flex justify-center">
-                <div onClick={()=>setCategoryItem(items)} className="hover:text-[#ffa600] p-5 flex flex-col items-center justify-center cursor-pointer">
+                <div onClick={()=>window.location.pathname='items'} className="hover:text-[#ffa600] p-5 flex flex-col items-center justify-center cursor-pointer">
                     <img src={allfood} className="h-10 w-10" alt="" />
                     <p>All</p>
                 </div>
@@ -93,8 +97,6 @@ const Items = () => {
             </div>
             <div className="my-9 grid md:grid-cols-2 lg:grid-cols-3 gap-7">
                 {
-                   categoryItem ? categoryItem.map((item)=><ItemCard key={item._id} item={item}></ItemCard>)
-                   :
                    items?.map((item)=><ItemCard key={item._id} item={item}></ItemCard>)
                 }
             </div>
