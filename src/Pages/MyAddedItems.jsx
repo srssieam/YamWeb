@@ -29,7 +29,7 @@ const MyAddedItems = () => {
                 console.log(res)
                 Swal.fire(
                     'Deleted!',
-                    'Your order has been deleted.',
+                    'Your item has been deleted.',
                     'success'
                 )
                 const remaining = addedItem.filter(item => item._id !== id);
