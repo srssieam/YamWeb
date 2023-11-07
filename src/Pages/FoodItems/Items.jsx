@@ -16,17 +16,22 @@ const Items = () => {
     const [categoryItem, setCategoryItem] = useState(null)
     const axios = UseAxios();
 
+    // pagination
+    const [itemsPerPage, setItemsPerPage] = useState(6)
     const getCount = useLoaderData();
     const foodCount = getCount.data.count
     console.log(foodCount)
-
-    const itemsPerPage = 6;
             // calculate total number of required page 
     const numberOfPages = Math.ceil(foodCount / itemsPerPage);
     console.log(numberOfPages) 
 
     const pages = [...Array(numberOfPages).keys()]
     console.log(pages)
+    const handleItemsPerPages = e =>{
+        const val = parseInt(e.target.value);
+        console.log(val);
+        setItemsPerPage(val)
+    }
 
     useEffect(() => {
         axios.get(`/foodItems`)
@@ -79,6 +84,17 @@ const Items = () => {
                    :
                    items?.map((item)=><ItemCard key={item._id} item={item}></ItemCard>)
                 }
+            </div>
+            <div className='text-[#ffa600] flex justify-center'>
+                {
+                    pages.map(page => <button className="bg-[#023302] hover:bg-[#64a13b] py-1 px-3 border border-[#ffa600] rounded" key={page}>{page}</button>)
+                }
+                 <select value={itemsPerPage} onChange={handleItemsPerPages} name="" id="">
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="9">9</option>
+                    <option value="11">11</option>
+                </select>
             </div>
         </div>
     );
