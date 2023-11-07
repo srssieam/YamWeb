@@ -17,7 +17,8 @@ const Items = () => {
     const axios = UseAxios();
 
     // pagination
-    const [itemsPerPage, setItemsPerPage] = useState(6)
+    const [itemsPerPage, setItemsPerPage] = useState(6);
+    const [currentPage, setCurrentPage] = useState(0);
     const getCount = useLoaderData();
     const foodCount = getCount.data.count
     console.log(foodCount)
@@ -30,7 +31,8 @@ const Items = () => {
     const handleItemsPerPages = e =>{
         const val = parseInt(e.target.value);
         console.log(val);
-        setItemsPerPage(val)
+        setItemsPerPage(val);
+        setCurrentPage(0)
     }
 
     useEffect(() => {
@@ -87,7 +89,7 @@ const Items = () => {
             </div>
             <div className='text-[#ffa600] flex justify-center'>
                 {
-                    pages.map(page => <button className="bg-[#023302] hover:bg-[#64a13b] py-1 px-3 border border-[#ffa600] rounded" key={page}>{page}</button>)
+                    pages.map(page => <button onClick={()=> setCurrentPage(page)} className={currentPage === page ? 'bg-[#64a13b]  py-1 px-3 border border-[#ffa600] rounded' : 'bg-[#023302] hover:bg-[#64a13b]  py-1 px-3 border border-[#ffa600] rounded'} key={page}>{page}</button>)
                 }
                  <select value={itemsPerPage} onChange={handleItemsPerPages} name="" id="">
                     <option value="3">3</option>
