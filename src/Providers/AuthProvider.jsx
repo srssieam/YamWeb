@@ -41,15 +41,24 @@ const AuthProvider = ({ children }) => {
      // observe onAuthStateChanged
      useEffect(()=>{
         const unSubscribe = onAuthStateChanged(auth, (currentUser)=>{
+            const userEmail = currentUser?.email || user?.email;
+            const loggedUser = {email: userEmail}
             setUser(currentUser)
             console.log('observing current user', currentUser)
             setLoading(false)
             // if user exists then issue a token
             if(currentUser){
-                const loggedUser = {email: currentUser.email}
                 axios.post('/jwt', loggedUser) // sent loggedUser to the server
                 .then(res => {
                     console.log('token response', res.data) // get token for loggedUser
+                })
+            }
+            else{
+                axios.post('/logout', loggedUser, {  // sent loggedUser={} to the server
+                    withCredentials: true
+                })
+                .then(res =>{
+                    console.log('logged out', res.data); // get response from server after clearing cookie
                 })
             }
         });
