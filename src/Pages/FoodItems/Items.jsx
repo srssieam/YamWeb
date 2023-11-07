@@ -35,6 +35,17 @@ const Items = () => {
         setCurrentPage(0)
     }
 
+    const handlePrevPage = () => {
+        if (currentPage > 0) {
+            setCurrentPage(currentPage - 1);
+        }
+    }
+    const handleNextPage = () => {
+        if (currentPage < pages.length - 1 ){
+            setCurrentPage(currentPage + 1)
+        }
+    }
+
     useEffect(() => {
         axios.get(`/foodItems`)
             .then(res => setItems(res.data))
@@ -88,10 +99,12 @@ const Items = () => {
                 }
             </div>
             <div className='text-[#ffa600] flex justify-center'>
+                <button className={currentPage === 0 ? 'hidden' : 'bg-[#023302] hover:bg-[#64a13b]  py-1 px-3 border border-[#ffa600] rounded'} onClick={handlePrevPage}>Prev</button>
                 {
                     pages.map(page => <button onClick={()=> setCurrentPage(page)} className={currentPage === page ? 'bg-[#64a13b]  py-1 px-3 border border-[#ffa600] rounded' : 'bg-[#023302] hover:bg-[#64a13b]  py-1 px-3 border border-[#ffa600] rounded'} key={page}>{page}</button>)
                 }
-                 <select value={itemsPerPage} onChange={handleItemsPerPages} name="" id="">
+                <button className={currentPage === pages.length-1  ? 'hidden' : 'bg-[#023302] hover:bg-[#64a13b]  py-1 px-3 border border-[#ffa600] rounded'} onClick={handleNextPage}>Next</button>
+                 <select value={itemsPerPage} className="bg-[#023302]" onChange={handleItemsPerPages} name="" id="">
                     <option value="3">3</option>
                     <option value="6">6</option>
                     <option value="9">9</option>
