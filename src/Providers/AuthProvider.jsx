@@ -65,7 +65,7 @@ const AuthProvider = ({ children }) => {
         return()=>{
             unSubscribe();
         }
-    },[])
+    },[axios])
 
     // sign out
     const userSignOut = ()=>{

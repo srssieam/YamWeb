@@ -81,7 +81,7 @@ const Routes = createBrowserRouter([
             },
             {
                 path:'updateFood/:id',
-                element:<PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>,
+                element:<UpdatePage></UpdatePage>,
                 loader:({params})=>axios.get(`/foodItems/${params.id}`)
             }
         ]

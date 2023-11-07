@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
-import UseAxios from "../hooks/UseAxios";
 import Swal from "sweetalert2";
+import UseAxios from "../hooks/UseAxios";
 
 
 const MyOrderedFood = () => {
