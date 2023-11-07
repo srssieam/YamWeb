@@ -41,6 +41,12 @@ const MyAddedItems = () => {
     return (
         <div className="max-w-[1250px] mx-auto px-6 lg:px-0 my-12">
             <h1 className="text-2xl md:text-4xl font-playpen text-[#64a13b]">Total added items: {addedItem.length}</h1>
+            <div>
+                {addedItem.length == 0 &&
+                    <div className="flex h-[50vh] items-center justify-center">
+                        <h1 className="text-4xl font-playpen text-center">You have not added any item Yet</h1>
+                    </div>}
+            </div>
             <div className=" my-9 gap-10 grid lg:grid-cols-2 ">
                 {
                     addedItem?.map(item => {
