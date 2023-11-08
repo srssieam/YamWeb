@@ -8,18 +8,24 @@ import about3 from '../assets/about img/about-3.jpg'
 import about4 from '../assets/about img/about-4.jpg'
 import { GiHotMeal } from 'react-icons/gi';
 import { MdOutlineBookOnline } from 'react-icons/md';
+import { useEffect } from "react";
+import 'aos/dist/aos.css';
+import Aos from "aos";
 
 const About = () => {
+    useEffect(() => {
+        Aos.init();
+      }, [])
     return (
         <div className="max-w-[1250px] px-6 lg:px-0 mx-auto">
             <div className="flex flex-col-reverse lg:flex-row gap-11 my-14">
-                <div className="flex-1 grid grid-cols-2 gap-6">
+                <div className="flex-1 grid grid-cols-2 gap-6" data-aos="flip-left" data-aos-duration="1000">
                     <img src={about1} alt="" />
                     <img src={about2} alt="" />
                     <img src={about3} alt="" />
                     <img src={about4} alt="" />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1" data-aos="flip-right" data-aos-duration="1000">
                     <h1 className="text-xl font-playpen font-semibold text-[#64a13b]">About us</h1>
                     <h1 className="text-3xl font-semibold">Why We Are The Best</h1>
                     <p>At [Restaurant Name], we take pride in offering an unparalleled dining experience that goes beyond just a meal.
@@ -49,7 +55,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col md:flex-row gap-10 lg:gap-20 justify-between items-center">
+            <div className="flex flex-col md:flex-row gap-10 lg:gap-20 justify-between items-center" >
                 <iframe className="flex-1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12329.298789947634!2d-74.00506900159402!3d40.73394471283048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259975c515555%3A0x4a45fc4021b26d52!2s31%205th%20Ave%2C%20New%20York%2C%20NY%2010003%2C%20USA!5e1!3m2!1sen!2sbd!4v1697677425813!5m2!1sen!2sbd" className='w-full h-[450px] mt-11' allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 <div className="flex-1 space-y-4 mb-8">
                     <h1 className="text-3xl font-bold">Got Questions ?</h1>

@@ -1,15 +1,21 @@
+import { useEffect } from 'react';
 import member1 from '../assets/team/member1.jpg'
 import member2 from '../assets/team/member2.jpg'
 import member3 from '../assets/team/member3.jpg'
+import 'aos/dist/aos.css';
+import Aos from 'aos';
 
 
 const Team = () => {
+    useEffect(() => {
+        Aos.init();
+      }, [])
     return (
         <div className='mx-auto max-w-[1250px] px-5 lg:px-0 my-11'>
             <h1 className="text-xl font-playpen font-semibold text-center text-[#64a13b]">Our team</h1>
             <h1 className="text-3xl md:text-5xl font-semibold text-center text-white">Meet Our Teem</h1>
             <div className='grid md:grid-cols-3 gap-5 lg:gap-7 my-14'>
-                <div className="relative flex flex-col text-gray-700 bg-white shadow-md rounded-xl bg-clip-border cursor-pointer transform transition-transform 1s hover:scale-110">
+                <div className="relative flex flex-col text-gray-700 bg-white shadow-md rounded-xl bg-clip-border cursor-pointer transform transition-transform 1s hover:scale-110" data-aos="fade-up" data-aos-duration="1000">
                     <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg h-80 rounded-xl bg-clip-border">
                         <img src={member1} className='h-full w-full object-cover' alt="profile-picture" />
                     </div>
@@ -22,7 +28,7 @@ const Team = () => {
                         </p>
                     </div>
                 </div>
-                <div className="relative flex flex-col  text-gray-700 bg-white shadow-md rounded-xl bg-clip-border cursor-pointer transform transition-transform 1s hover:scale-110">
+                <div className="relative flex flex-col  text-gray-700 bg-white shadow-md rounded-xl bg-clip-border cursor-pointer transform transition-transform 1s hover:scale-110" data-aos="fade-down" data-aos-duration="1000">
                     <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg h-80 rounded-xl bg-clip-border">
                         <img src={member2} className='h-full w-full object-cover' alt="profile-picture" />
                     </div>
@@ -35,7 +41,7 @@ const Team = () => {
                         </p>
                     </div>
                 </div>
-                <div className="relative flex flex-col text-gray-700 bg-white shadow-md rounded-xl bg-clip-border cursor-pointer transform transition-transform 1s hover:scale-110">
+                <div className="relative flex flex-col text-gray-700 bg-white shadow-md rounded-xl bg-clip-border cursor-pointer transform transition-transform 1s hover:scale-110" data-aos="fade-up" data-aos-duration="1000">
                     <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg h-80 rounded-xl bg-clip-border">
                         <img src={member3} className='h-full w-full object-cover' alt="profile-picture" />
                     </div>

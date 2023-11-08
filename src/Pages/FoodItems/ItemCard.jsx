@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
 import halal from '../../assets/halal.png'
+import { useEffect } from "react";
+import AOS from 'aos';
 
 const ItemCard = ({ item }) => {
     const { _id, foodName, foodImage, foodCategory, price, quantity } = item;
+    useEffect(() => {
+        AOS.init();
+      }, [])
     return (
-        <div className="card card-compact bg-base-100 border shadow-[#64a13b] shadow-xl">
+        <div className="card card-compact bg-base-100 border shadow-[#64a13b] shadow-xl" data-aos="zoom-in" data-aos-duration="1000">
             <figure className="h-[250px] relative">
                 <img src={foodImage} alt="img" className="h-full w-full object-cover transition-transform hover:scale-125" />
                 <img src={halal} alt="" className="absolute w-28 right-0 bottom-0"/>

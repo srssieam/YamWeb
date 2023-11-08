@@ -11,6 +11,7 @@ import UseAxios from "../../hooks/UseAxios";
 import { useLoaderData } from "react-router-dom";
 import { ImSearch } from 'react-icons/im';
 
+
 const Items = () => {
     const [items, setItems] = useState([]);
     const [categoryItem, setCategoryItem] = useState('')
@@ -78,6 +79,7 @@ const Items = () => {
         console.log(searchText)
         e.target.reset()
     }
+
 
     return (
         <div className="max-w-[1250px] mx-auto px-6 lg:px-0 my-8 md:my-16">

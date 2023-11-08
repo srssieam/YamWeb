@@ -15,6 +15,7 @@ const FoodDetails = () => {
                 <h2 className="card-title md:text-2xl">{foodName}</h2>
                 <p><strong className="text-[#64a13b]">Made by:</strong> {name}</p>
                 <p><strong className="text-[#64a13b]">Food origin:</strong> {foodOrigin}</p>
+                <p><strong className="text-[#64a13b]"> Available Stock:</strong>{quantity}</p>
                 <p><strong className="text-[#64a13b]"> Price:</strong> ${price}</p>
                 <p>{description}</p>
                 <div className="card-actions justify-end">
