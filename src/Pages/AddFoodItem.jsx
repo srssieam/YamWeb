@@ -38,13 +38,19 @@ const AddFoodItem = () => {
         .then(res => {
             console.log(res.data)
             if (res.data.insertedId) {
-                Swal.fire(
-                    'Added new item',
-                    'Your food is added successfullY',
-                    'success'
-                )
+                Swal.fire({
+                    title:'Added new item',
+                    text:'Your food is added successfullY',
+                    icon:'success',
+                    confirmButtonColor: "#066606",
+                    confirmButtonText: "OK",
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.pathname='myAddedItems'
+                        }
+                      });
                 form.reset();
-                window.location.pathname='myAddedItems'
+                
             }
         })
         .catch(err => console.log(err));

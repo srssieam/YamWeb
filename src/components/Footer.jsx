@@ -1,13 +1,20 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo-1.png'
 import footerbg from '../assets/bannerImg/footerimg.jpg'
+import Swal from 'sweetalert2';
 
 const Footer = () => {
-    // const footerStyle = {
-    //     backgroundImage: 'url("../assets/food img/registerimg.jpg")',
-    //     backgroundSize: 'cover', // Adjust this according to your needs
-    //     // Add other background-related properties as needed
-    //   };
+    const handleSubscribe = e =>{
+        e.preventDefault();
+        Swal.fire(
+            'Subscription successful!',
+            'Thank you for being with us',
+            'success'
+        )
+        e.target.reset();
+
+    }
+    
     return (
         <div className=' w-full' style={{backgroundImage:`url(${footerbg})`}}>
             <footer className="footer p-10 max-w-[1250px] mx-auto text-gray-400 bottom-0">
@@ -39,15 +46,15 @@ const Footer = () => {
                     <Link to='/services' className="link link-hover">Services</Link>
                     <Link to='/team'className="link link-hover">Our team</Link>
                 </nav>
-                <form>
+                <form onSubmit={handleSubscribe}>
                     <header className="footer-title text-xl text-[#ffa600]">Newsletter</header>
                     <fieldset className="form-control lg:w-80">
                         <label className="label">
                             <span className="">Enter your email address</span>
                         </label>
                         <div className="relative">
-                            <input type="text" placeholder="username@site.com" className="input border border-[#0b270b] w-full" />
-                            <button className="btn bg-[#0b270b] text-[#ffa600] border-none absolute top-0 right-0 rounded-l-none">Subscribe</button>
+                            <input type="text" placeholder="username@site.com" className="input border border-[#0b270b] w-full" required/>
+                            <button type='submit' className="btn bg-[#0b270b] text-[#ffa600] border-none absolute top-0 right-0 rounded-l-none">Subscribe</button>
                         </div>
                     </fieldset>
                 </form>
