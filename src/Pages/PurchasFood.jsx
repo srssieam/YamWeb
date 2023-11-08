@@ -12,7 +12,7 @@ const PurchasFood = () => {
     const axios = UseAxios()
     const loadedFoodItem = useLoaderData();
     console.log(loadedFoodItem)
-    const { _id, foodName, foodCategory, quantity, price, foodImage, OrderedCount } = loadedFoodItem.data;
+    const { _id, foodName, foodCategory, quantity, price, foodImage, email, OrderedCount } = loadedFoodItem.data;
 
 
     const handlePurchase = (e) => {
@@ -27,8 +27,9 @@ const PurchasFood = () => {
         console.log(foodName, price, purchaseQuantity, date, buyerName, buyerEmail)
 
         const totalOrderedCount = OrderedCount + parseFloat(purchaseQuantity);
+        const remainingQuantity = quantity - parseFloat(purchaseQuantity)
         console.log(OrderedCount, parseFloat(purchaseQuantity))
-        console.log(totalOrderedCount);
+        console.log(totalOrderedCount, remainingQuantity);
 
 
         const purchaseInfo = {
@@ -40,6 +41,15 @@ const PurchasFood = () => {
             purchaseQuantity,
             foodCategory,
             foodImage,
+        }
+
+        if(buyerEmail === email){
+            Swal.fire({
+                title: "Warning?",
+                text: "You can't purchase your own added item!",
+                icon: "warning",
+              })
+              return;
         }
 
         if (purchaseQuantity > quantity) {
@@ -66,7 +76,7 @@ const PurchasFood = () => {
             })
             .catch(err => console.log(err));
 
-        axios.patch(`/foodItems/${_id}`, { totalOrderedCount })
+        axios.patch(`/foodItems/${_id}`, { totalOrderedCount, remainingQuantity })
             .then(res => {
                 console.log(res)
             })

@@ -17,15 +17,14 @@ import MyOrderedFood from "../Pages/myOrderedFood";
 import PrivateRoute from "./PrivateRoute";
 import MyAddedItems from "../Pages/MyAddedItems";
 import UpdatePage from "../components/UpdatePage";
-
-// import ErrorPage from "../Pages/ErrorPage";
+import ErrorPage from "../Pages/ErrorPage";
 const axios = UseAxios();
 
 const Routes = createBrowserRouter([
     {
         path:'/',
         element:<Root></Root>,
-        // errorElement:<ErrorPage></ErrorPage>,
+        errorElement:<ErrorPage></ErrorPage>,
         children:[
             {
                 path:'/',
