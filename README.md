@@ -1,4 +1,7 @@
-
+# Link of client side:- https://yamweb.netlify.app/
+# Link of server side:- https://yamweb.vercel.app/
+# Link of server side(food items):- https://yamweb.vercel.app/v1/api/foodItems
+# Link of server side(purchased items):- https://yamweb.vercel.app/v1/api/purchasedItems
 # Projects Features:-
 ## 1. Eye pleasing User Interface: 
   + Provided Navigation bar so that user can visit multiple pages.
