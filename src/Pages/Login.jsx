@@ -7,6 +7,7 @@ import { useContext, useState } from 'react';
 import { AuthContext } from '../Providers/AuthProvider';
 import Swal from 'sweetalert2';
 
+
 const Login = () => {
     const { signInUser, googleSignIn } = useContext(AuthContext) 
     const [loginError, setLoginError] =  useState(null);

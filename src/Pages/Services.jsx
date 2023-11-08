@@ -1,5 +1,6 @@
 import { GiFruitBowl, GiHotMeal } from 'react-icons/gi';
 import { IoRestaurantOutline } from 'react-icons/io5';
+
 const Services = () => {
     return (
         <div className=" md:my-11 px-6 lg:px-0 m-4 max-w-[1250px] mx-auto text-[#4c7c2d]">

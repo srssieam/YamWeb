@@ -65,13 +65,17 @@ const PurchasFood = () => {
             .then(res => {
                 console.log(res.data)
                 if (res.data.insertedId) {
-                    Swal.fire(
-                        'Thank You!',
-                        'Purchase successful!',
-                        'success'
-                    )
-                    form.reset();
-                    window.location.pathname='myOrderedFood'
+                    Swal.fire({
+                        title:'Purchase successful',
+                        text:'Thank you for being with us',
+                        icon:'success',
+                        confirmButtonColor: "#066606",
+                        confirmButtonText: "OK",
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                window.location.pathname='myOrderedFood'
+                            }
+                          });         
                 }
             })
             .catch(err => console.log(err));

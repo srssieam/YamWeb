@@ -2,6 +2,7 @@ import member1 from '../assets/team/member1.jpg'
 import member2 from '../assets/team/member2.jpg'
 import member3 from '../assets/team/member3.jpg'
 
+
 const Team = () => {
     return (
         <div className='mx-auto max-w-[1250px] px-5 lg:px-0 my-11'>
