@@ -31,7 +31,7 @@
   + This website is responsive for small and large devises
 # used Technologies:-
   ## Front end:
-  + React Router Dom, tailwindCSS , DaisyUI, Tanstack query, axios, swiper JS, React tabs, sweet alerts, firebase authentication
+  + React Router Dom, tailwindCSS , DaisyUI, axios, swiper JS, React tabs, sweet alerts, firebase authentication
   ## Back end:
   + node JS, express JS, MongoDB, JWT authentication
 # Project selling Line:
