@@ -9,7 +9,8 @@
   + Displayed sweet Alert with beautiful Gratitude message while login , register. 
 ## 2. Food items Catalog:
   + Display a wide range of food items with images, quantity and prices.
-  + User can find food items by category
+  + Automatic calculate the food stock limit.
+  + User can find food items  by category 
   + Also provided a search field so that user can search food by food name
   + Clicking on details button it will show details of food and order button
   + Clicking on order button it will display purchase page and user after press purchase button a sweet alert will be displayed
@@ -28,3 +29,10 @@
   + User can delete and update only his added food items.
 ## 6. Responsiveness:
   + This website is responsive for small and large devises
+# used Technologies:-
+  ## Front end:
+  + React Router Dom, tailwindCSS , DaisyUI, Tanstack query, axios, swiper JS, React tabs, sweet alerts, firebase authentication
+  ## Back end:
+  + node JS, express JS, MongoDB, JWT authentication
+# Project selling Line:
+  + Presenting a comprehensive restaurant platform designed to elevate the dining experience! This project showcases seamless food addition, ordering, and search functionalities along with smart category filtering and pagination. Moreover, it incorporates a robust stock limit calculation system, ensuring efficient inventory management. Experience the future of dining technology in action!
